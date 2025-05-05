@@ -9,6 +9,10 @@ body {
   align-items: center;
   height: 100vh;
 }
+body.gallery-page {
+display:block;
+ height:auto;
+}
 
 .login-container {
   text-align: center;
