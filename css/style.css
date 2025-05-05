@@ -10,8 +10,8 @@ body {
   height: 100vh;
 }
 body.gallery-page {
-display:block;
- height:auto;
+display: block;
+ height: auto;
 }
 
 .login-container {
