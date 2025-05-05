@@ -1,0 +1,135 @@
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #db2809bb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.guest-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.guest-bar:hover {
+  background-color: #555;
+}
+
+.qr-code-container {
+  display: none;
+  margin-top: 20px;
+}
+
+.qr-code-container img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+p {
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Gallery Container */
+#gallery-section {
+  padding: 20px;
+  text-align: center; /* Center the text and content */
+}
+
+/* Gallery Grid Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 15px; /* Space between the images */
+  justify-items: center; /* Center images within their grid cells */
+}
+
+/* Style for individual images */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensure images cover the space equally */
+  display: block;     /* Prevent unwanted space below images */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover effect - zoom in slightly */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Sequential fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation with a delay for sequential appearance */
+.gallery img {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0; /* Start with the image hidden */
+}
+
+.gallery img:nth-child(1) { animation-delay: 0s; }
+.gallery img:nth-child(2) { animation-delay: 0.2s; }
+.gallery img:nth-child(3) { animation-delay: 0.4s; }
+.gallery img:nth-child(4) { animation-delay: 0.6s; }
+.gallery img:nth-child(5) { animation-delay: 0.8s; }
+.gallery img:nth-child(6) { animation-delay: 1s; }
+.gallery img:nth-child(7) { animation-delay: 1.2s; }
+.gallery img:nth-child(8) { animation-delay: 1.4s; }
+.gallery img:nth-child(9) { animation-delay: 1.6s; }
+.gallery img:nth-child(10) { animation-delay: 1.8s; }
+.gallery img:nth-child(11) { animation-delay: 2s; }
+.gallery img:nth-child(12) { animation-delay: 2.2s; }
+.gallery img:nth-child(13) { animation-delay: 2.4s; }
+.gallery img:nth-child(14) { animation-delay: 2.6s; }
+.gallery img:nth-child(15) { animation-delay: 2.8s; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .gallery {
+    display: flex; /* Use Flexbox on mobile */
+    flex-wrap: wrap; /* Allow images to wrap */
+    justify-content: center;
+    gap: 10px; /* Smaller gap between images */
+    padding: 5px; /* Less padding on mobile */
+  }
+
+  .gallery img {
+    object-fit: contain;  /* Ensure the images scale correctly on smaller screens */
+    height: auto;          /* Adjust height for mobile */
+  }
+}
