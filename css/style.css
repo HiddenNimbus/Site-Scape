@@ -62,6 +62,8 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
   gap: 15px; /* Space between the images */
   justify-items: center; /* Center images within their grid cells */
+  overflow:auto;
+  max-height:none;/* Adjust height for mobile */
 }
 
 /* Style for individual images */
@@ -129,7 +131,9 @@ html {
   }
 
   .gallery img {
+    
     object-fit: contain;  /* Ensure the images scale correctly on smaller screens */
-    height: auto;          /* Adjust height for mobile */
+    height: auto; 
+   
   }
 }
