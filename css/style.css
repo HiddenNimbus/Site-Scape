@@ -140,3 +140,15 @@ html {
    
   }
 }
+.play-audio {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.play-audio:hover {
+  background-color: #555;
+}
