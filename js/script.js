@@ -11,4 +11,11 @@ guestBar.addEventListener('click', function() {
         qrCodeContainer.style.display = 'none';   
     }
 });
- 
+ document.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('bg-audio');
+  if (audio) {
+    audio.play().catch(() => {
+     
+    });
+  }
+});
