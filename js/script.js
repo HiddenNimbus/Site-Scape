@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const guestBar = document.getElementById('guest-bar');
-  const qrCodeContainer = document.getElementById('qr-code-container');
+  let guestBar = document.getElementById('guest-bar');
+  let qrCodeContainer = document.getElementById('qr-code-container');
 
   guestBar.addEventListener('click', function() {
       if (qrCodeContainer.style.display === 'none' || qrCodeContainer.style.display === '') {
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 
-  const audio = document.getElementById('bg-audio');
-  const playbutton = document.getElementById('play-audio-button');
+  let audio = document.getElementById('bg-audio');
+  let playbutton = document.getElementById('play-audio-button');
   if (audio && playbutton) {
       playbutton.addEventListener('click', () => {
           audio.play().catch(error => {
